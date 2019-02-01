@@ -1,0 +1,64 @@
+/* CONTACT-SECTION
+/* ==================================
+#contact-section
+  padding: 120px 0
+  position: relative
+  background: $color-primary-0
+
+  // SECTION-HEAD P,
+  // SECTION-HEAD H2 > SPAN
+  // ==================================
+  .section-head p,
+  .section-head h2 > span
+    color: $color-white
+
+  .section-head
+    h2
+      position: relative
+      // H2::BEFORE
+      // ==================================
+      &::before
+        content: ""
+        +size(40px)
+        background: $color-secondary-2-2
+        position: absolute
+        top: 50%
+        left: -50px
+        transform: translateY(-50%)
+        clip-path: polygon(0% 0%, 75% 50%, 0% 100%)
+
+  // CONTACT-SECTION > TEXTAREA
+  // ==================================
+  textarea.form-control
+    margin-bottom: 60px
+
+  // CONTACT-SECTION > CITERRA-BTN
+  // ==================================
+  .citerra-btn
+    color: $color-primary-0 !important
+
+  // CONTACT-SECTION > PHONE, EMAIL
+  // ==================================
+  .phone, .email
+    list-style-type: none
+
+    // PHONE > LI, EMAIL > LI
+    // ==================================
+    li
+      color: $color-white
+      margin-bottom: 6px
+      letter-spacing: 200 / 1000 + 0em
+
+      // LI:FIRST-CHILD
+      // ==================================
+      &:first-child
+        font-weight: 700
+        color: $color-secondary-2-2
+        letter-spacing: inherit
+        margin-bottom: 15px
+
+  // CONTACT-SECTION > EMAIL
+  // ==================================
+  .email
+    @media(max-width: 768px)
+      margin-bottom: 60px

@@ -1,0 +1,66 @@
+/* BANNER-SECTION
+/* ==================================
+#banner-section
+  padding: 80px 0
+  position: relative
+  background: $color-primary-0
+  @media(max-width: 768px)
+    text-align: center
+
+  // BANNER-SECTION:BEFORE
+  // ==================================
+  &::before
+    z-index: -1
+    content: ""
+    background: $color-primary-0
+    +size(100%)
+    position: absolute
+    top: 0
+    left: 0
+    clip-path: polygon(100% 0%, 100% 100%, 0% 100%)
+    @media(max-width: 768px)
+      display: none
+
+  // BANNER-SECTION::AFTER
+  // ==================================
+  &::after
+    content: ""
+    z-index: -1
+    +size(100%)
+    background: $color-primary-0
+    position: absolute
+    top: 100%
+    left: 0
+    clip-path: polygon(0% 0%, 100% 0%, 0% 100%)
+    @media(max-width: 768px)
+      display: none
+
+  // BANNER-SECTION > H1
+  // ==================================
+  h1
+    font-size: 60px
+    font-weight: 700
+    line-height: 60px
+    margin-bottom: 50px
+    color: $color-white
+    @media(max-width: 414px)
+      font-size: 52px
+
+  // BANNER-SECTIN > P
+  // ==================================
+  p
+    font-size: 14px
+    line-height: 100% * (24px / 14px)
+    color: darken($color-white, 20)
+    max-width: 500px
+    max-height: 70px
+    overflow: hidden
+    margin-bottom: 50px
+    @media(max-width: 768px)
+      max-width: none
+
+  // BANNER-SECTION > BANNER-IMG
+  // ==================================
+  .banner-img
+    @media(max-width: 768px)
+      margin-bottom: 60px

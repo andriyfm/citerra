@@ -1,0 +1,15 @@
+//- NAVBAR-SECTION
+//- ==================================
+nav.navbar.navbar-expand-lg.fixed-top
+  .container
+    a.navbar-brand(href="#")
+      img(src="img/citerra-logo.svg", alt="citerra logo")
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbar-section" aria-controls="navbar-section" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+        
+    .collapse.navbar-collapse#navbar-section
+      ul.navbar-nav
+        - var items = {"#banner-section":"banner", "#feature-section":"feature", "#reviewer-section":"reveiwer", "#screenshot-section":"screenshot", "#demo-section":"demo", "#download-section":"download", "#contact-section":"contact"}
+        each name, id in items
+          li.nav-item
+            a.nav-link(href=id).text-uppercase #{name}

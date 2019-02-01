@@ -1,0 +1,17 @@
+// CENTERING ELEMENT
+// ==================================
+=centering($pos)
+  position: $pos
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+// DEFINDING WIDTH & HEIGHT OF ELEMENT
+// ==================================
+=size($w, $h: null)
+  @if ($h == null)
+    width: $w
+    height: $w
+  @else
+    width: $w
+    height: $h

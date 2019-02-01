@@ -1,0 +1,55 @@
+//- FEATURE-SECTION
+//- ==================================
+section#feature-section
+  .container
+    
+    .row.align-items-center
+      .col-lg-5.mx-auto.text-center
+        //- SECTION-HEAD
+        //- ==================================
+        +section-head('citerra', 'feature')
+    
+    .row.align-items-center
+      .col-lg-6.col-md-10.feature-lists
+          
+        - var items = {'flaticon-font-designe':'beautiful design', 'flaticon-color-choice':'pixel perfect', 'flaticon-retouch':'easy to use'}
+        each name, icon in items
+          
+          //- FEATURE-LIST > ITEM
+          //- ==================================
+          .item
+            .icon
+              span(class=icon)
+                
+            .body
+              // Feature Item Title
+              h5.text-uppercase #{name}
+              // Feature Item Description
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        
+      .col-lg-6.col-md-10.feature-detail
+        
+        // Feature Image
+        img.wow.bounceInRight(src="img/iphone-black-landscape.png", alt="feature image")          
+        
+        // Feature Detail Title
+        h5.text-uppercase
+          | make your life easier with
+          |
+          span citerra
+        // Feature Detail Description
+        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        
+        //- FEATURE-DETAIL-LISTS
+        //- ==================================
+        .feature-detail-lists.d-flex
+          ul
+            // Feature Detail List Item
+            li.text-capitalize ease to use
+            // Feature Detail List Item                
+            li.text-capitalize social connect
+          ul
+            // Feature Detail List Item                
+            li.text-capitalize pixel perfect
+            // Feature Detail List Item                
+            li.text-capitalize dedicated support

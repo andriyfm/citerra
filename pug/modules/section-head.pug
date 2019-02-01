@@ -1,0 +1,23 @@
+//- Section Head
+//- ==================================
+mixin section-head(title, title2, desc)
+  .section-head
+    
+    // Section Title
+    h2.text-uppercase
+      if title != null
+        | #{title}
+      else
+        | citerra
+      |
+      |
+      if title2 != null
+        span #{title2}
+      else
+        span feature
+        
+    // Section Description
+    if desc != null
+      p #{desc}
+    else
+      p Citerra offer a wide range of features with Beautiful Design & Great Functionality

@@ -1,0 +1,169 @@
+/* FEATURE-SECTION
+/* ==================================
+#feature-section
+  padding: 120px 0
+  position: relative
+  // overflow: hidden
+  @media(max-width: 768px)
+    background: $color-white
+
+  // FEATURE-SECTION::BEFORE
+  // FEATURE-SECTION::AFTER
+  // ==================================
+  &::before,
+  &::after
+    content: ""
+    +size(100%)
+    background: $color-white
+    position: absolute
+    left: 0
+    z-index: -1
+    @media(max-width: 768px)
+      display: none
+  &::before
+    top: 0
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%)
+  &::after
+    top: 100%
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%)
+
+  // SECTION-HEAD
+  // ==================================
+  .section-head
+
+    // SECTION-HEAD > H2
+    // ==================================
+    h2
+      position: relative
+
+      // H2::BEFORE
+      // ==================================
+      &::before
+        content: ""
+        +size(40px)
+        background: $color-secondary-2-2
+        position: absolute
+        top: -60px
+        left: 50%
+        transform: translateX(-50%)
+        clip-path: polygon(50% 25%, 100% 100%, 0% 100%)
+
+  // FEATURE-LISTS
+  // ==================================
+  .feature-lists
+    @media(max-width: 768px)
+      margin: 0 auto 40px
+
+  // FEATURE-SECTION > ITEM
+  // ==================================
+  .item
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+
+    // ITEM:LAST-CHILD
+    // ==================================
+    &:last-child
+      margin-bottom: 0
+
+    // ITEM > ICON
+    // ==================================
+    .icon
+
+      // ICON > SPAN::BEFORE
+      // ==================================
+      span::before
+        font-size: 54px
+        margin-left: 0
+        margin-right: 20px
+
+    // ITEM > BODY
+    // ==================================
+    .body
+
+      // BODY > H5
+      // ==================================
+      h5
+        font-size: 16px
+        font-weight: 700
+        color: $color-secondary-1-1
+        margin-bottom: 20px
+
+      // BODY > P
+      // ==================================
+      p
+        font-size: 12px
+        line-height: 100% * (19px / 12px)
+        margin-bottom: 0
+
+  // FEATURE-SECTION > FEATURE-DETAIL
+  // ==================================
+  .feature-detail
+    @media(max-width: 768px)
+      margin: 0 auto
+
+    // FEATURE-DETAIL > H5
+    // ==================================
+    h5
+      font-size: 16px
+      font-weight: 700
+      color: $color-gray
+      width: 40%
+      margin-bottom: 20px
+
+      // H5 > SPAN
+      // ==================================
+      & > span
+        color: $color-secondary-1-1
+
+    // FEATURE-DETAIL > P
+    // ==================================
+    p
+      font-size: 12px
+      font-weight: 400
+      margin-bottom: 30px
+
+    // FEATURE-DETAIL > IMG
+    img
+      width: 100%
+      height: auto
+      @media(max-width: 768px)
+        margin-bottom: 40px
+
+  // FEATURE-SECTION > FEATURE-DETAIL-LISTS
+  // ==================================
+  .feature-detail-lists
+
+    // FEATURE-DETAIL-LISTS > UL
+    // ==================================
+    ul
+      list-style-type: none
+      padding: 0
+      margin-bottom: 0
+      margin-right: 30px
+
+      // UL > LI
+      // ==================================
+      & > li
+        position: relative
+        padding-left: 20px
+        margin-bottom: 6px
+        font-weight: 700
+        color: $color-secondary-1-1
+
+        // LI:LAST-CHILD
+        // ==================================
+        &:last-child
+          margin-bottom: 0
+
+        // LI::BEFORE
+        // ==================================
+        &::before
+          content: ""
+          +size(6px)
+          background: $color-gray
+          border-radius: 100%
+          position: absolute
+          top: 50%
+          left: 0
+          transform: translateY(-50%)

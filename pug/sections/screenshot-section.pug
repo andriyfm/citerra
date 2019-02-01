@@ -1,0 +1,18 @@
+//- Screenshot Section
+//- ==================================
+section#screenshot-section
+  .container
+    .row
+      
+      .col-lg-5.mx-auto
+        +section-head('citerra', 'screenshot')
+        
+      .col-lg-10.mx-auto.text-center
+        .screenshot-lists
+          
+          - var imgs = {1:"wow bounceInLeft", 2:"wow bounceInUp", 3:"wow bounceInRight"}
+          each animateClass, img in imgs
+            .screenshot-img
+              // Screenshot Image
+              img(class=animateClass ,src="img/screenshot-"+ img +".png", alt="screenshot image")
+            

@@ -1,0 +1,40 @@
+//- CONTACT-SECTION
+//- ==================================
+section#contact-section
+  .container
+    .row.align-items-center
+            
+      .col-lg-5
+        //- CONTACT-SECTION > SECTION-HEAD
+        //- ==================================
+        +section-head('contact', 'us')
+        
+        .row
+          ul.phone.col-lg-6
+            li.text-uppercase phone
+            // Phone Number 1
+            li (01) 2220 3330
+            // Phone Number 2
+            li (01) 4440 5550
+          ul.email.col-lg-6
+            li.text-uppercase email
+            // Email 1
+            li developer@yoursite.com
+            // Email 2
+            li support@yoursite.com
+        
+      .col-lg-5.ml-auto
+        //- CONTACT-SECTION > FORM
+        //- ==================================
+        form
+          .form-group
+            label(for="name").sr-only.text-uppercase name
+            input(type="text" placeholder="name").form-control#name
+          .form-group
+            label(for="email").sr-only.text-uppercase email
+            input(type="email" placeholder="email").form-control#email
+          .form-group
+            label(for="message").sr-only.text-uppercase message
+            textarea(placeholder="message").form-control#message
+          button(type="submit").btn.citerra-btn.yellow submit
+        

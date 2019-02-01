@@ -1,0 +1,7 @@
+// FINDING AN ELEMENT
+// ==================================
+=find($color: null)
+  @if ($color == null)
+    border: 2px dashed transparentize(gray, 0.3)
+  @else
+    border: 2px dashed transparentize($color, 0.3)

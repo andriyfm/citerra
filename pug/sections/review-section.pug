@@ -1,0 +1,44 @@
+//- REVIEWER-SECTION
+//- ==================================
+section#reviewer-section
+  .container
+    .row.align-items-center
+      .col-lg-5.mx-auto.text-center
+        
+        //- SECTION-HEAD
+        //- ==================================
+        +section-head('citerra', 'review')
+        
+    .row
+      
+      - var reviwers = {"1":"nikita mirzano", "2":"atalaric syah", "3":"tengku wisnu", "4":"cyntia lamusu", "5":"ferdinand sinaga", "6":"nella kharisma"}
+      
+      .col-lg-12
+        .owl-carousel.owl-theme.reviewer-content
+          each name, num in reviwers
+            .item
+              .reviewer-message
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                h5.text-capitalize #{name}
+                  span akutaktahu inc.
+              .reviewer-img
+                img(src="img/testimony-photo-"+ num +".png", alt="reviewer photo")
+          
+      
+      
+        //- .col-lg-4.col-md-8.reviwer-content
+          
+          //- REVIWER-MESSAGE
+          //- ==================================
+          .reviewer-message
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            h5.text-capitalize #{name} -
+              |
+              |
+              span akutaktahu inc.
+              
+          //- REVIEWER-IMG
+          //- ==================================
+          .reviewer-img
+            img(src="img/testimony-photo-"+ num +".png", alt="reviewer photo")
+        

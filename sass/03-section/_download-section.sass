@@ -1,0 +1,72 @@
+/* DOWNLOAD-SECTION
+/* ==================================
+#download-section
+  padding: 120px 0
+  position: relative
+  @media(max-width: 768px)
+    background: $color-white
+
+  // DOWNLOAD-SECTION::BEFORE
+  // ==================================
+  &::before
+    z-index: -1
+    content: ""
+    +size(100%)
+    background: $color-white
+    position: absolute
+    top: 0
+    left: 0
+    clip-path: polygon(0% 0%, 100% 100%, 0% 100%)
+    @media(max-width: 768px)
+      display: none
+
+  // SECTION-HEAD
+  // ==================================
+  .section-head
+
+    // SECTION-HEAD [MEDIUM DEVICE]
+    // ==================================
+    @media(max-width: 768px)
+      text-align: center
+
+    // SECTION-HEAD > H2
+    // ==================================
+    h2
+      position: relative
+
+      // H2::BEFORE
+      // ==================================
+      &::before
+        content: ""
+        +size(40px)
+        background: $color-secondary-2-2
+        position: absolute
+        top: 50%
+        left: -50px
+        transform: translateY(-50%)
+        clip-path: polygon(0% 0%, 75% 50%, 0% 100%)
+
+        // H2::BEFORE [MEDIUM DEVICE]
+        // ==================================
+        @media(max-width: 768px)
+          top: -60px
+          left: 50%
+          transform: translateX(-50%)
+          clip-path: polygon(50% 25%, 100% 100%, 0% 100%)
+
+  // DOWNLOAD-SECTION > DOWNLOAD-BUTTONS
+  // ==================================
+  .download-buttons
+    @media(max-width: 768px)
+      text-align: center
+      margin-bottom: 60px
+
+  // DOWNLOAD-SECTION > DOWNLOAD-IMG
+  // ==================================
+  .download-img
+    text-align: right
+
+    // DOWNLOAD-IMG [MEDIUM DEVICE]
+    // ==================================
+    @media(max-width: 768px)
+      text-align: center

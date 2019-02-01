@@ -1,0 +1,41 @@
+/* NAVBAR-SECTION
+/* ==================================
+.navbar
+  transition: $defult-transition
+  @media(max-width: 768px)
+    background: $color-primary-0
+
+/* NAVBAR-BRAND
+/* ==================================
+.navbar-brand
+  width: 131px
+  height: auto
+
+/* NAVBAR-TOGGLER
+/* ==================================
+.navbar-toggler
+  background-image: url("../img/hamburger-icon.svg")
+  background-repeat: no-repeat
+  background-position: center
+  cursor: pointer
+  &:focus
+    outline: none
+
+/* NAVBAR-SECTION
+/* ==================================
+#navbar-section
+  justify-content: flex-end
+  @media(max-width: 768px)
+    margin-top: 20px
+
+  // NAVBAR-SECTION > NAV-LINK
+  // ==================================
+  .nav-link
+    color: $color-white
+    font-size: 12px
+    font-weight: 700
+    letter-spacing: 140 / 1000 + 0em
+    transition: $defult-transition
+    &:hover
+      background: darken($color-primary-0, 4)
+      color: $color-secondary-1-1

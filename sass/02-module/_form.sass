@@ -1,0 +1,29 @@
+/* FORM-CONTROL
+/* ==================================
+.form-control
+  font-size: 14px
+  padding: 20px
+  border-radius: 0
+  border: 0
+  border-bottom: 2px solid $color-secondary-2-1
+  background: transparent
+  color: $color-white
+  text-transform: uppercase
+  transition: $defult-transition
+  position: relative
+
+  &::after
+    content: ""
+    +size(100%)
+    +centering(absolute)
+    background: red
+
+  &::placeholder
+    color: $color-white
+
+  &:focus
+    background: darken($color-primary-0, 1%)
+    border-radius: none
+    color: $color-white
+    box-shadow: none
+    border-color: $color-secondary-2-1
